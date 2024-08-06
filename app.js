@@ -6,6 +6,8 @@ let followers = document.getElementById("followers"); // this is the followers d
 let followersTitle = document.getElementById('followers-title')
 
 searchBtn.addEventListener('click', () => {
+  userData.innerHTML = ''
+  followers.innerHTML = ''
   fetch(`https://api.github.com/users/${input.value}`) // get the user data
     .then((response) => {
       if (!response.ok) {

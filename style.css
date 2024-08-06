@@ -4,9 +4,6 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
-html{
-    height: 100%;
-}
 
 body {
     background: #eee;
@@ -49,6 +46,7 @@ body {
 #container {
     display: grid;
     padding: 10px 100px;
+    width: 100%;
 }
 #container img{
     width: 300px;
@@ -57,7 +55,6 @@ body {
     object-fit: cover;
     outline: 2px solid white;
     outline-offset: 3px;
-    padding: 0px;
 }
 #container #user-data{
     display: flex;
@@ -66,6 +63,7 @@ body {
     flex-direction: column;
     gap: 15px;
     grid-row: span 12;
+    width: 100%;
 }
 #container #followers{
     display: flex;
@@ -75,6 +73,7 @@ body {
     flex-wrap: wrap;
     padding: 50px 100px;
     text-align: center;
+    width: 100%;
 }
 #followers-title{
     display: none;
@@ -92,4 +91,29 @@ body {
     width: 30%;
     height: 50%;
     object-fit: cover;
+}
+
+@media (max-width: 729px) {
+    .search-container{
+        padding: 0px;
+    }
+    #container{
+        padding: 0px;
+    }
+    #container img{
+        width: 200px;
+        height: 200px;
+    }
+    #container #user-data{
+        width: 100%;
+    }
+    #container #followers .followers-child{
+        
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-container{
+        padding: 10px 30px;
+    }
 }
