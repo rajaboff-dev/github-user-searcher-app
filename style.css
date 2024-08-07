@@ -107,9 +107,6 @@ body {
     #container #user-data{
         width: 100%;
     }
-    #container #followers .followers-child{
-        
-    }
 }
 
 @media (max-width: 1024px) {
